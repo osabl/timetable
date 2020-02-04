@@ -1,7 +1,19 @@
 * {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
+    color: #444747;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background: url(/img/background.png);
+}
+
+
+/* -----HEADER----- */
 
 .title {
     display: flex;
@@ -10,9 +22,12 @@
     margin: 10px 20px;
     padding: 15px 20px;
 
-    font-family: fantasy;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 
-    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.125);
+    background-color: white;
 }
 
 .today {
@@ -32,36 +47,46 @@
     font-size: 36px;
 }
 
+/* -----WEEK----- */
+
 .week {
     display: flex;
     justify-content: space-between;
-    margin: 10px 20px;
-
-    border: 1px solid black;
+    margin: 20px;
 }
 
 .day {
     width: 18%;
 
-    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.125);
+    background-color: white;
 }
 
 .day__title {
+    /* margin: 11px; */
     padding: 20px 5px;
     text-align: center;
+
+    border-radius: 10px 10px 0 0;
+    background-color: #9DDCDC;
 }
 
 .day__classes {
     margin: 15px 10px;
+    padding: 1px;
 
-    border: 1px solid black;
+    border-radius: 10px;
+    /* background-color: #F0F0F0; */
 }
 
 .class {
-    margin: 7px 5px;
+    margin: 12px 5px;
     padding: 1px 5px 0 5px;
 
-    border: 1px solid black;
+    border-radius: 7px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.125);
+    background-color: #9DDCDC;
 }
 
 .class__info {
@@ -77,9 +102,34 @@
 .time-bar__time {
     display: flex;
     justify-content: space-between;
-
-
 }
 
+/* -----PROGRESS BAR----- */
 
+.time-bar__progress {
+    width: 100%;
+    height: 5px;
 
+    border-radius: 10px;
+}
+
+.time-bar__progress::-webkit-progress-bar {
+    width: 100%;
+    height: 5px;
+
+    border-radius: 10px;
+}
+
+.time-bar__progress::-webkit-progress-value {
+    width: 100%;
+    height: 5px;
+
+    border-radius: 10px;
+}
+
+.time-bar__progress::-moz-progress-bar {
+    width: 100%;
+    height: 5px;
+
+    border-radius: 10px;
+}
