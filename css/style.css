@@ -1,0 +1,78 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 15px 20px;
+
+    border: 1px solid black;
+}
+
+.today {
+    display: flex;
+    align-items: center;
+
+    font-size: 18px;
+}
+
+.today__info {
+    margin: 0 10px;
+
+    font-size: 12px;
+}
+
+.group {
+    font-size: 36px;
+}
+
+.week {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+
+    border: 1px solid black;
+}
+
+.day {
+    width: 18%;
+
+    border: 1px solid black;
+}
+
+.day__title {
+    padding: 20px 5px;
+    text-align: center;
+}
+
+.day__classes {
+    margin: 15px 10px;
+
+    border: 1px solid black;
+}
+
+.class {
+    margin: 7px 5px;
+    padding: 1px 5px 0 5px;
+
+    border: 1px solid black;
+}
+
+.class__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.class__title {
+    padding: 3px;
+    text-align: center;
+}
+
+.time-bar__time {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+
+
