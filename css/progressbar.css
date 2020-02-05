@@ -1,0 +1,55 @@
+.class.active .time-bar__progress {
+    display: block;
+}
+
+.time-bar__progress {
+    width: 100%;
+    height: 5px;
+    display: none;
+
+    border-radius: 10px;
+    background-color: #CA8E51;
+    color: #1D374E;
+}
+
+.class.active .time-bar__progress {
+    display: block;
+}
+
+.time-bar__progress::-webkit-progress-bar {
+    width: 100%;
+    height: 5px;
+    display: none;
+
+    border-radius: 10px;
+    background-color: #CA8E51;
+    color: #1D374E;
+}
+
+.class.active .time-bar__progress {
+    display: block;
+}
+
+.time-bar__progress::-webkit-progress-value {
+    width: 100%;
+    height: 5px;
+    display: none;
+
+    border-radius: 10px;
+    background-color: #CA8E51;
+    color: #1D374E;
+}
+
+.class.active .time-bar__progress {
+    display: block;
+}
+
+.time-bar__progress::-moz-progress-bar {
+    width: 100%;
+    height: 5px;
+    display: none;
+
+    border-radius: 10px;
+    background-color: #CA8E51;
+    color: #1D374E;
+}
