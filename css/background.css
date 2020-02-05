@@ -1,8 +1,10 @@
-.day__classes.day-off-1 {
+.day-off-1 {
     margin: 10px;
     height: 328.85px;
 
     background-image: url(/img/sleep_poses_1.jpg);
+    background-color: rgb(201, 207, 204);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,6 +16,8 @@
     height: 328.85px;
 
     background-image: url(/img/sleep_poses_2.jpg);
+    background-color: rgb(201, 207, 204);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -25,6 +29,8 @@
     height: 328.85px;
 
     background-image: url(/img/sleep_poses_3.jpg);
+    background-color: rgb(201, 207, 204);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,6 +42,8 @@
     height: 328.85px;
 
     background-image: url(/img/sleep_poses_4.jpg);
+    background-color: rgb(201, 207, 204);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -47,10 +55,22 @@
     height: 328.85px;
 
     background-image: url(/img/sleep_poses_5.jpg);
+    background-color: rgb(201, 207, 204);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+}
+
+.class.break {
+    background-image: url(/img/break.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(147, 158, 153);
+    border-radius: 5px;
 }
 
 .class.lecture {
@@ -75,16 +95,6 @@
 
 .class.laboratory {
     background-image: url(/img/laboratory.jpg);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(147, 158, 153);
-    border-radius: 5px;
-}
-
-.class.break {
-    background-image: url(/img/break.jpg);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
