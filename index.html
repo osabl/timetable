@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/checkbox.css">
+    <link rel="stylesheet" href="css/background.css">
     <title>TimeTable</title>
 </head>
 
@@ -25,7 +27,7 @@
             <div class="change-week">
                 <div>
                     <label for="checkbox">над</label>
-                    <input type="checkbox" id="checkbox"/>
+                    <input type="checkbox" id="checkbox" />
                     <label for="checkbox">под</label>
                 </div>
                 <p>чертой</p>
@@ -41,7 +43,7 @@
                 <div class="day__img"></div>
                 <div class="day__title">День недели</div>
                 <div class="day__classes">
-                    <div class="class">
+                    <div class="class practice">
                         <div class="class__info">
                             <div class="class__classroom">number</div>
                             <div class="class__teacher">Teacher name</div>
@@ -55,7 +57,7 @@
                             <progress class="time-bar__progress" max="100" value="10"></progress>
                         </div>
                     </div>
-                    <div class="class">
+                    <div class="class lecture">
                         <div class="class__info">
                             <div class="class__classroom">number</div>
                             <div class="class__teacher">Teacher name</div>
@@ -69,7 +71,7 @@
                             <progress class="time-bar__progress" max="100" value="0"></progress>
                         </div>
                     </div>
-                    <div class="class">
+                    <div class="class laboratory">
                         <div class="class__info">
                             <div class="class__classroom">number</div>
                             <div class="class__teacher">Teacher name</div>
@@ -83,7 +85,7 @@
                             <progress class="time-bar__progress" max="100" value="0"></progress>
                         </div>
                     </div>
-                    <div class="class">
+                    <div class="class break">
                         <div class="class__info">
                             <div class="class__classroom">number</div>
                             <div class="class__teacher">Teacher name</div>
@@ -114,80 +116,8 @@
                 </div>
             </div>
             <div class="day">
-                <div class="day__img"></div>
                 <div class="day__title">День недели</div>
-                <div class="day__classes">
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <progress class="time-bar__progress" max="100" value="0"></progress>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <progress class="time-bar__progress" max="100" value="0"></progress>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <progress class="time-bar__progress" max="100" value="0"></progress>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <progress class="time-bar__progress" max="100" value="0"></progress>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <progress class="time-bar__progress" max="100" value="0"></progress>
-                        </div>
-                    </div>
-                </div>
+                <div class="day__classes day-off-1"></div>
             </div>
             <div class="day">
                 <div class="day__title">День недели</div>
