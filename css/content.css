@@ -1,36 +1,41 @@
 .week {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+
+    max-width: 1600px;
+    margin: 20px auto;
 }
 
 .day {
-    width: 18%;
+    width: 270px;
+    min-width: 250px;
+    margin: 10px;
 
     border-radius: 16px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.125);
     background-color: white;
 }
-
 .day__title {
+    box-sizing: border-box;
+    height: 60px;
     padding: 20px 5px;
-    text-align: center;
 
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
     color: white;
 
-    border-radius: 16px 16px 0 0;
     background-color: #19334B;
+    border-radius: 16px 16px 0 0;
 }
-
-.day__classes.day-off-1 {
+.day__classes[class*="day-off"] {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.day__classes.day-off-1 > p {
+.day__classes[class*="day-off"] p {
     color: white;
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 900;
 }
 
@@ -40,18 +45,25 @@
 
     color: #F5F6EB;
 }
-
 .class__info {
     display: flex;
     justify-content: space-between;
-}
 
+    font-size: 13px;
+    font-weight: 500;
+}
 .class__title {
     padding: 3px;
+    
     text-align: center;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .time-bar__time {
     display: flex;
     justify-content: space-between;
+
+    font-size: 12px;
 }
+
