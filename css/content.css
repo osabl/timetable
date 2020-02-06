@@ -3,13 +3,21 @@
     justify-content: space-between;
 
     max-width: 1600px;
+    min-width: 320px;
     margin: 20px auto;
 }
 
+
+.day:first-child {
+    margin-left: 0;
+}
+.day:last-child {
+    margin-right: 0;
+}
 .day {
     width: 270px;
     min-width: 250px;
-    margin: 10px;
+    margin: 10px auto;
 
     border-radius: 16px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.125);
@@ -25,9 +33,14 @@
     text-align: center;
     color: white;
 
-    background-color: #19334B;
+    background-color: rgb(58, 11, 90);
     border-radius: 16px 16px 0 0;
 }
+.week.odd
+.day__title {
+    background-color: rgb(25, 51, 75);
+}
+
 .day__classes[class*="day-off"] {
     display: flex;
     justify-content: center;
@@ -45,6 +58,7 @@
 
     color: #F5F6EB;
 }
+
 .class__info {
     display: flex;
     justify-content: space-between;
@@ -52,9 +66,10 @@
     font-size: 13px;
     font-weight: 500;
 }
+
 .class__title {
     padding: 3px;
-    
+
     text-align: center;
     font-size: 18px;
     font-weight: 600;
@@ -66,4 +81,3 @@
 
     font-size: 12px;
 }
-

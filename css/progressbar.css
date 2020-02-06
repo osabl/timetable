@@ -7,7 +7,7 @@
     display: none;
     height: 3px;
 
-    background: rgb(184, 22, 22);
+    background: rgb(134, 0, 0);
     border-radius: 5px;
 }
 
@@ -17,8 +17,13 @@
     height: 100%;
     width: 10%;
     
-    background-color: rgb(40, 209, 85);
+    background-color: rgb(169, 73, 207);
     border-radius: 5px;
 
     overflow: hidden;
-  }
+}
+
+.week.odd 
+.progressbar > span {
+    background-color: rgba(53, 148, 226);
+}

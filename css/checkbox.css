@@ -3,7 +3,7 @@ input[type="checkbox"] {
   height: 10px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: #76d337;
+  background: rgb(169, 73, 207);
   outline: none;
   border-radius: 50px;
   box-shadow: inset 0 0 5px rgba(0,0,0, .2);
@@ -11,7 +11,7 @@ input[type="checkbox"] {
   position: relative;
 }
 input:checked[type="checkbox"] {
-  background: #02a9f4;
+  background: rgb(53, 148, 226);
 }
 input[type="checkbox"]::before {
   content: '';
@@ -30,6 +30,13 @@ input:checked[type="checkbox"]::before {
   left: 10px;
 }
 .change-week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+
   font-size: 12px;
-  text-align: center;
+}
+.change-week div {
+  width: max-content;
 }

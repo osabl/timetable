@@ -3,13 +3,20 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-
+    padding: 0 20px;
     background: #F5F6EC;
 }
 
-.day.active .day__title {
+
+
+.week.active.even 
+.day.active 
+.day__title {
+    border-bottom: 5px solid rgb(169, 73, 207);
+}
+
+.week.active.odd 
+.day.active 
+.day__title {
     border-bottom: 5px solid rgb(53, 148, 226);
 }
