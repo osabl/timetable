@@ -1,0 +1,38 @@
+/* Large desktops and laptops */
+@media (min-width: 1401px) {
+    .slide-link {
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+    .week {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    .week::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+    }
+
+    .week::-webkit-scrollbar-thumb {
+        background-color: rgb(169, 73, 207);
+        border-radius: 10px;
+    }
+
+    .week.odd::-webkit-scrollbar-thumb {
+        background-color: rgba(53, 148, 226);
+    }
+
+    .week::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .week>div {
+        margin-right: 30px;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+}
