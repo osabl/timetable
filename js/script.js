@@ -10,7 +10,7 @@ const toggleWeeks = document.querySelector('.change-week input[type="checkbox"]'
 const week = document.querySelector('.week');
 const days = document.querySelectorAll('.day');
 
-const date = new Date('01.06.2020 10:00');
+const date = new Date();
 
 setActiveWeek(date);
 setWeekDayPosition(date);
