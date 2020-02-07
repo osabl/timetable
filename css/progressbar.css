@@ -1,5 +1,38 @@
-.class.active .progressbar,
-.class.active .progressbar {
+.past-time {
+    display: none;
+    color: rgb(227, 253, 184);
+}
+.time-left {
+    display: none;
+    color: rgb(252, 182, 182);
+}
+.week.active 
+.day.active
+.class.active 
+.past-time,
+.week.active 
+.day.active
+.class.active 
+.time-left {
+    display: block;
+}
+
+.week.active 
+.day.active
+.class.active 
+.time-bar__start,
+.week.active 
+.day.active
+.class.active 
+.time-bar__end {
+    display: none;
+}
+
+
+.week.active 
+.day.active
+.class.active 
+.progressbar {
     display: block;
 }
 
@@ -7,7 +40,7 @@
     display: none;
     height: 3px;
 
-    background: rgb(134, 0, 0);
+    background: rgb(204, 5, 5);
     border-radius: 5px;
 }
 
@@ -15,7 +48,7 @@
     display: none;
     display: block;
     height: 100%;
-    width: 10%;
+    width: 0%;
     
     background-color: rgb(169, 73, 207);
     border-radius: 5px;
