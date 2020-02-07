@@ -1,11 +1,17 @@
-.day-off, 
-.day-off-1, 
-.day-off-2, 
-.day-off-3, 
-.day-off-4, 
-.day-off-5 {
+.day[class*="day-off"] {
+    position: relative;
+}
+
+
+.day-off > .day__classes, 
+.day-off-1 > .day__classes, 
+.day-off-2 > .day__classes, 
+.day-off-3 > .day__classes, 
+.day-off-4 > .day__classes, 
+.day-off-5 > .day__classes {
     margin: 10px;
-    height: 328.85px;
+    min-height: 328.85px;
+    
 
     background-color: rgb(201, 207, 204);
     background-blend-mode: multiply;
@@ -15,19 +21,37 @@
     border-radius: 10px;
 }
 
-.day-off, .day-off-1 {
+[class*="day-off"] .day__classes {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+[class*="day-off"] p {
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.day-off > .day__classes, 
+.day-off-1 > .day__classes {
     background-image: url(/img/sleep_poses_1.jpg);
 }
-.day__classes.day-off-2 {
+.day-off-2 > .day__classes {
     background-image: url(/img/sleep_poses_2.jpg);
 }
-.day__classes.day-off-3 {
+.day-off-3 > .day__classes {
     background-image: url(/img/sleep_poses_3.jpg);
 }
-.day__classes.day-off-4 {
+.day-off-4 > .day__classes {
     background-image: url(/img/sleep_poses_4.jpg);
 }
-.day__classes.day-off-5 {
+.day-off-5 > .day__classes {
     background-image: url(/img/sleep_poses_5.jpg);
 }
 
