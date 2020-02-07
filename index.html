@@ -14,25 +14,25 @@
     <link rel="stylesheet" href="/css/progressbar.css">
     <link rel="stylesheet" href="/css/checkbox.css">
     <link rel="stylesheet" href="/css/background.css">
-    <title>TimeTable</title>
+    <title>Time Table</title>
 </head>
 
 <body>
     <header>
         <div class="title">
             <div class="today">
-                <label>Сегодня: </label>
+                <label>Сегодня:</label>
                 <div class="today__info">
-                    <div class="today-info__day">Вторник</div>
-                    <div class="today-info__date">26 апреля</div>
-                    <div class="today-info__week">Четная неделя</div>
+                    <div class="today-info__day"></div>
+                    <div class="today-info__date"></div>
+                    <div class="today-info__week"></div>
                 </div>
             </div>
             <div class="group">5362м</div>
             <div class="change-week">
                 <div>
                     <label for="checkbox">над</label>
-                    <input type="checkbox" id="checkbox" />
+                    <input type="checkbox" id=""/>
                     <label for="checkbox">под</label>
                 </div>
                 <div>чертой</div>
@@ -41,338 +41,273 @@
     </header>
 
     <main>
-        <div class="week active even">
-            <!-- Emmet -> (div.day>div.day__title{День недели}+div.day__classes>(div.class>(div.class__info>div.class__classroom{number}+div.class__teacher{Teacher name})+div.class__title{Class}+div.time-bar>(div.time-bar__time>div.time-bar__start{time start}+div.time-bar__end{time end})+div.time-bar__progress{time bar})*5)*5 -->
-
-            <div class="day active" id="mon">
-                <div class="day__img"></div>
-                <div class="day__title">День недели</div>
+        <div class="week">
+            <div class="day" id="mon">
+                <div class="day__title">Понедельник</div>
                 <div class="day__classes">
-                    <div class="class practice active">
+
+                    <div class="class break even">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom"></div>
+                            <div class="class__teacher"></div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Пара не найдена</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">9:00</div>
+                                <div class="time-bar__end">10:20</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="class laboratory odd">
+                        <div class="class__info">
+                            <div class="class__classroom">309 НК</div>
+                            <div class="class__teacher">Войтасик А.Н.</div>
+                        </div>
+                        <div class="class__title">Інтелект. керув. засоб. морських робототехнічних комплексів</div>
+                        <div class="time-bar">
+                            <div class="time-bar__time">
+                                <div class="time-bar__start">9:00</div>
+                                <div class="time-bar__end">10:20</div>
+                            </div>
+                            <div class="progressbar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="class lecture">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">134 НК</div>
+                            <div class="class__teacher">Волянська Я.Б.</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Основови автомат. проектування</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">10:30</div>
+                                <div class="time-bar__end">11:50</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="class laboratory">
+
+                    <div class="class lecture">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">306 НК</div>
+                            <div class="class__teacher">Овсянников В.М.</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Дисципліна спец. підготовки</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">12:20</div>
+                                <div class="time-bar__end">13:40</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="class break">
+
+                    <div class="class laboratory even">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">НК</div>
+                            <div class="class__teacher">Войтасик А.Н.</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Теоретичні основи проектування</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">13:50</div>
+                                <div class="time-bar__end">15:10</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="class">
+
+                    <div class="class practice odd">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">309Б НК</div>
+                            <div class="class__teacher">Бабкін Г.В.</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Дисципліна спец. підготовки</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">13:50</div>
+                                <div class="time-bar__end">15:10</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="class lecture even">
+                        <div class="class__info">
+                            <div class="class__classroom">309Б НК</div>
+                            <div class="class__teacher">Бабкін Г.В.</div>
+                        </div>
+                        <div class="class__title">Теоретичні основи проектування</div>
+                        <div class="time-bar">
+                            <div class="time-bar__time">
+                                <div class="time-bar__start">15:20</div>
+                                <div class="time-bar__end">16:40</div>
+                            </div>
+                            <div class="progressbar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="day" id="tue">
-                <div class="day__title">День недели</div>
-                <div class="day__classes day-off-1">
-                    <p>Выходной :)</p>
+                <div class="day__title">Вторник</div>
+                <div class="day__classes">
+                   
+                    <div class="class break">
+                        <div class="class__info">
+                            <div class="class__classroom"></div>
+                            <div class="class__teacher"></div>
+                        </div>
+                        <div class="class__title">Пара не найдена</div>
+                        <div class="time-bar">
+                            <div class="time-bar__time">
+                                <div class="time-bar__start">9:00</div>
+                                <div class="time-bar__end">10:20</div>
+                            </div>
+                            <div class="progressbar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="class lecture">
+                        <div class="class__info">
+                            <div class="class__classroom">420 ГК</div>
+                            <div class="class__teacher">Белоусова С.М.</div>
+                        </div>
+                        <div class="class__title">Іноземна мова</div>
+                        <div class="time-bar">
+                            <div class="time-bar__time">
+                                <div class="time-bar__start">10:30</div>
+                                <div class="time-bar__end">11:50</div>
+                            </div>
+                            <div class="progressbar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="class lecture">
+                        <div class="class__info">
+                            <div class="class__classroom">505 ГК</div>
+                            <div class="class__teacher"></div>
+                        </div>
+                        <div class="class__title">Цивільна оборона</div>
+                        <div class="time-bar">
+                            <div class="time-bar__time">
+                                <div class="time-bar__start">12:20</div>
+                                <div class="time-bar__end">13:40</div>
+                            </div>
+                            <div class="progressbar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="day" id="wed">
-                <div class="day__title">День недели</div>
+                <div class="day__title">Среда</div>
                 <div class="day__classes">
-                    <div class="class">
+
+                    <div class="class lecture even">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">230 НК</div>
+                            <div class="class__teacher">Локарев В.І.</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Основи наук. досліджень</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">09:00</div>
+                                <div class="time-bar__end">10:20</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="class">
+
+                    <div class="class laboratory odd">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">306 НК</div>
+                            <div class="class__teacher">Грудініна</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Основи автомат. проектування</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">09:00</div>
+                                <div class="time-bar__end">10:20</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="class">
+
+                    <div class="class lecture even">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">309Б НК</div>
+                            <div class="class__teacher">Блінцов В.С.</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Інтелект. керув. засоб. морських робототехнічних комплексів</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">10:30</div>
+                                <div class="time-bar__end">11:50</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="class">
+
+                    <div class="class practice odd">
                         <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
+                            <div class="class__classroom">321 НК</div>
+                            <div class="class__teacher">Волянська Я.Б.</div>
                         </div>
-                        <div class="class__title">Class</div>
+                        <div class="class__title">Основи наук. досліджень</div>
                         <div class="time-bar">
                             <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
+                                <div class="time-bar__start">10:30</div>
+                                <div class="time-bar__end">11:50</div>
                             </div>
                             <div class="progressbar">
                                 <span></span>
                             </div>
                         </div>
                     </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="day" id="thu">
-                <div class="day__title">День недели</div>
-                <div class="day__classes">
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="day__title">Четверг</div>
+                <div class="day__classes day-off-1">
+                    <p>ДКП :)</p>
                 </div>
             </div>
             <div class="day" id="fri">
-                <div class="day__title">День недели</div>
-                <div class="day__classes">
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="class">
-                        <div class="class__info">
-                            <div class="class__classroom">number</div>
-                            <div class="class__teacher">Teacher name</div>
-                        </div>
-                        <div class="class__title">Class</div>
-                        <div class="time-bar">
-                            <div class="time-bar__time">
-                                <div class="time-bar__start">time start</div>
-                                <div class="time-bar__end">time end</div>
-                            </div>
-                            <div class="progressbar">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="day__title">Пятница</div>
+                <div class="day__classes day-off-3">
+                    <p>ДКП :)</p>
                 </div>
             </div>
         </div>
