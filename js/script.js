@@ -10,7 +10,7 @@ const toggleWeeks = document.querySelector('.change-week input[type="checkbox"]'
 const week = document.querySelector('.week');
 const days = document.querySelectorAll('.day');
 
-const date = new Date();
+const date = new Date('2020-02-03 10:40');
 
 setActiveWeek(date);
 setWeekDayPosition(date);
@@ -38,7 +38,8 @@ function setActiveDay(dateObj) {
 
 function setActiveClass(dateObj) {
     try {
-        let lesson = days[dateObj.getDay() - 1].querySelectorAll('.class')[getCurrentClass(dateObj)];
+        const lessons = getLessonsOfDay(dateObj);
+        const lesson = lessons[getCurrentClass(dateObj)];
         let attributes = lesson.getAttribute("class") + " active";
         lesson.setAttribute('class', attributes);
     } catch (error) {
@@ -51,43 +52,37 @@ function setPastTime(dateObj) {
     try {
         let pastTime = getPastTime(dateObj, getCurrentClass(dateObj));
         let startTime = document.createElement('div');
-        startTime.className = 'past-time'; 
+        startTime.className = 'past-time';
         startTime.textContent = formatTime(pastTime);
 
-        let elem = days[dateObj.getDay() - 1]
-        .querySelectorAll('.class')[getCurrentClass(dateObj)]
-        .querySelector('.time-bar__time');
+        let elem = getLessonsOfDay(dateObj)[getCurrentClass(dateObj)]
+            .querySelector('.time-bar__time');
 
         elem.prepend(startTime);
-    } catch (error) {
-    }
+    } catch (error) {}
 }
 
 function setTimeLeft(dateObj) {
     try {
         let timeLeft = getTimeLeft(dateObj, getCurrentClass(dateObj));
         let endTime = document.createElement('div');
-        endTime.className = 'time-left'; 
+        endTime.className = 'time-left';
         endTime.textContent = formatTime(timeLeft);
 
-        let elem = days[dateObj.getDay() - 1]
-        .querySelectorAll('.class')[getCurrentClass(dateObj)]
-        .querySelector('.time-bar__time');
+        let elem = getLessonsOfDay(dateObj)[getCurrentClass(dateObj)]
+            .querySelector('.time-bar__time');
 
         elem.append(endTime);
-    } catch (error) {
-    }
-} 
+    } catch (error) {}
+}
 
 function setProgress(dateObj) {
     try {
-        let elem = days[dateObj.getDay() - 1]
-        .querySelectorAll('.class')[getCurrentClass(dateObj)]
-        .querySelector('.progressbar > span');
+        let elem = getLessonsOfDay(dateObj)[getCurrentClass(dateObj)]
+            .querySelector('.progressbar > span');
         let progress = getClassProgress(date, getCurrentClass(date), MILLISECS_IN_CLASS);
         elem.style.width = `${progress}%`;
-    } catch (error) {
-    }
+    } catch (error) {}
 }
 
 function setActiveWeek(dateObj) {
@@ -203,12 +198,31 @@ function getCurrentClass(dateObj) {
     }
 }
 
+function getLessonsOfDay(dateObj) {
+    let reverseWeek;
+    let lessons = [];
+    if (isOddWeek(dateObj)) {
+        reverseWeek = 'even';
+    } else {
+        reverseWeek = 'odd';
+    }
+
+    const elemList = days[dateObj.getDay() - 1].querySelectorAll('.class');
+    elemList.forEach((elem) => {
+        if (!elem.classList.contains(reverseWeek)) {
+            lessons.push(elem);
+        }
+    });
+
+    return lessons;
+}
+
 function getPastTime(dateObj, lesson) {
     const currentTime = ((dateObj.getHours() * 60) + dateObj.getMinutes()); // minutes
 
     switch (lesson) {
         case 0:
-            return (currentTime - 540); 
+            return (currentTime - 540);
         case 1:
             return (currentTime - 630);
         case 2:
@@ -229,7 +243,7 @@ function getTimeLeft(dateObj, lesson) {
 
     switch (lesson) {
         case 0:
-            return (620 - currentTime); 
+            return (620 - currentTime);
         case 1:
             return (710 - currentTime);
         case 2:
