@@ -7,13 +7,13 @@ export class TimeCapture extends Date {
       if (p1) return 'я'
       if (p2) return match + 'а'
     })}`
-    this.week = ['над чертой', 'под чертой'][this.getWeek()]
+    this.week = ['над чертой', 'под чертой'][this.getWeekNumber() % 2]
   }
 
-  getWeek () {
+  getWeekNumber () {
     const MILLISECS_IN_WEEK = 604800000
     const FIRST_WEEK_IN_SEMESTER = new Date('2020-02-03')
-    return Math.ceil((this.getTime() - FIRST_WEEK_IN_SEMESTER) / MILLISECS_IN_WEEK) % 2
+    return Math.ceil((this.getTime() - FIRST_WEEK_IN_SEMESTER) / MILLISECS_IN_WEEK)
   }
 
   getMinutesToday () {
