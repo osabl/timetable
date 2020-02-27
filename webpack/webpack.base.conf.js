@@ -98,7 +98,7 @@ module.exports = {
     //   filename: `./${page.replace(/\.pug/, '.html')}`
     // })),
     new HtmlWebpackPlugin({
-      template: `${PATHS.src}/index.html`,
+      template: `${PATHS.src}/pug/index.pug`,
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({

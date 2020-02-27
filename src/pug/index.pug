@@ -1,0 +1,31 @@
+include variables.pug
+include mixins.pug
+
+- 
+  var array= [{
+    val: 1
+    }, {
+    val: 2
+    }, {
+    val: 3}]
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Рассписание
+  body
+    +test1('TEST', array)
+    //- .week.over
+    //-   +day('Понедельник', mondayOver, timeRanges)
+    //-   +day('Вторник', tuesdayOver, timeRanges)
+    //-   +day('Среда', wednesdayOver, timeRanges)
+    //-   //- +day('Четверг', thursdayOver, timeRanges)
+    //-   //- +day('Пятница', fridayOver, timeRanges)
+    //- .week.under
+    //-   +day('Понедельник', mondayUnder, timeRanges)
+    //-   +day('Вторник', tuesdayUnder, timeRanges)
+    //-   +day('Среда', wednesdayUnder, timeRanges)
+    //-   //- +day('Четверг', thursdayUnder, timeRanges)
+    //-   //- +day('Пятница', fridayUnder, timeRanges)
