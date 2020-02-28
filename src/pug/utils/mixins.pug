@@ -1,0 +1,20 @@
+mixin day(title, lessons, timeRanges)
+  .day
+    h2 #{title}
+    div.container
+      each lesson, index in lessons
+        +lesson(lesson, timeRanges[index])
+
+mixin lesson(lesson, timeRange)
+  div
+    .time
+      div= timeRange.start
+      .progress
+      div= timeRange.end
+    .lesson
+      img(src=`${lesson.pathImageByType}`, alt=`${lesson.type}`)
+      div
+        .classroom= lesson.classroom
+        .title= lesson.title
+        .teacher= lesson.teacher
+
