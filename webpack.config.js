@@ -123,14 +123,14 @@ module.exports = {
     //   filename: `./${page.replace(/\.pug/, '.html')}`
     // })),
     new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/index.pug`,
+      template: `${PATHS.src}/${PATHS.assets}/pug/index.pug`,
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: isDevMode ? `${PATHS.assets}css/[name].css` : `${PATHS.assets}css/[name].[hash].css`
+      filename: isDevMode ? `${PATHS.assets}/css/[name].css` : `${PATHS.assets}/css/[name].[hash].css`
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/${PATHS.assets}/img`, to: `${PATHS.assets}/img` },
       // { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' }
     ])
