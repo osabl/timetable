@@ -27,17 +27,19 @@ window.onload = function () {
   const dateInfo = document.querySelector('#date')
   const weekInfo = document.querySelector('#week')
 
-  const toggle = document.querySelector('.toggle > img')
+  const toggleBtn = document.querySelector('.toggle > img')
+  const toggle = document.querySelector('.toggle')
   const header = document.querySelector('.header')
   const pagination = document.querySelector('.swiper-pagination')
   const days = document.querySelectorAll('.day')
   const flipElements = [toggle, header, pagination, ...days]
 
-  toggle.addEventListener('click', () => {
+  toggleBtn.addEventListener('click', () => {
     for (const elem of days) {
       elem.classList.toggle('flip')
     }
     pagination.classList.toggle('flip')
+    toggle.classList.toggle('flip')
   })
 
   if ((timecap.getWeekNumber() - 1) % 2) {
