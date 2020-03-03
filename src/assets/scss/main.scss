@@ -38,12 +38,12 @@
 
 .week {
   display: flex;
-  perspective: 1000px;
+  // perspective: 1000px;
 }
 
 .wrapper {
   display: flex;
-  // perspective: 2000px;
+  perspective: 2000px;
 }
 
 // FLIP
@@ -94,4 +94,8 @@
   &.active {
     background-color: $bgColorUnder;
   }
+}
+
+.countdown {
+  color: #CE2828;
 }
