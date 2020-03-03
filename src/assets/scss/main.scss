@@ -82,10 +82,17 @@
   background-color: $headerColorUnder;
 }
 
-.toggle.flip {
-  >img {
+.toggle {
+  > img {
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     transition: 1.5s;
-    transform: rotateZ(-180deg);
+  }
+  &.flip {
+    > img {
+      transform: rotateZ(-180deg);
+    }
   }
 }
 
