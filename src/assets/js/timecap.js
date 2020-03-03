@@ -7,13 +7,13 @@ export class TimeCapture extends Date {
       if (p1) return 'я'
       if (p2) return match + 'а'
     })}`
-    this.week = ['над чертой', 'под чертой'][this.getWeekNumber() % 2]
+    this.week = ['над чертой', 'под чертой'][(this.getWeekNumber() - 1) % 2]
   }
 
   getWeekNumber () {
     const MILLISECS_IN_WEEK = 604800000
-    const FIRST_WEEK_IN_SEMESTER = new Date('2020-02-03')
-    return Math.ceil((this.getTime() - FIRST_WEEK_IN_SEMESTER) / MILLISECS_IN_WEEK)
+    const FIRST_WEEK_IN_SEMESTER = new Date('2020-02-03 00:00:00')
+    return Math.ceil((this.getTime() - FIRST_WEEK_IN_SEMESTER.getTime()) / MILLISECS_IN_WEEK)
   }
 
   getMinutesToday () {
@@ -22,10 +22,13 @@ export class TimeCapture extends Date {
 
   getPhase (phases) {
     const today = this.getMinutesToday()
+    console.log(today)
 
     for (let i = 0; i < phases.length; i++) {
-      if (phases[i][0] <= today && today <= phases[i][1]) {
-        return i + getFraction(today, phases[i][0], phases[i][1])
+      console.log(i, phases[i].from, phases[i].to)
+
+      if (phases[i].from <= today && today < phases[i].to) {
+        return i + getFraction(today, phases[i].from, phases[i].to)
       }
     }
 
