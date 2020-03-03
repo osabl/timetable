@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+  font-family: $mainFontRegular;
+  color: $mainFontColorLight;
+
+  background-color: $headerColorOver;
+
+  .info {
+    width: 33.333%;
+
+    font-size: rem(14);
+    line-height: rem(16);
+  }
+
+  .title {
+    width: 33.333%;
+
+    font-size: rem(22);
+    line-height: rem(26);
+    text-align: center;
+  }
+
+  .toggle {
+    width: 33.333%;
+    text-align: right;
+  }
+}

@@ -1,0 +1,130 @@
+.card {
+  margin: 21px;
+  padding: 14px 0;
+  width: calc(100vw - 42px);
+  max-width: 598px;
+  min-width: 278px;
+
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow:
+    -3px -3px 5px rgba(0, 0, 0, 0.1),
+    3px -3px 5px rgba(0, 0, 0, 0.1),
+    -3px 3px 5px rgba(0, 0, 0, 0.1),
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+
+  .title {
+    font-family: $mainFontMedium;
+    font-size: rem(36);
+    line-height: rem(42);
+    text-align: center;
+  }
+
+  .lesson, .day-off, .break {
+    &.active {
+      background-color: $bgColorOver;
+    }
+    display: flex;
+    padding: 7px 14px;
+
+    .time {
+      display: flex;
+      flex-direction: column;
+
+      margin-right: 8px;
+
+      font-family: $mainFontMedium;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+
+      .progress {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .progress-over {
+          // height: 0%; - start
+          // height: 100%; - start 
+          width: 3px;
+  
+          background-color: #000000;
+        }
+
+        .progress-under {
+          flex: auto;
+          width: 3px;
+  
+          background-color: #B9B9B9;
+        }
+  
+      }
+
+    }
+
+    .info {
+      display: flex;
+      flex: auto;
+      padding: 7px;
+
+      font-family: $mainFontLight;
+      font-size: rem(14);
+      line-height: rem(16);
+      text-align: right;
+
+      background: #F7F7F7;
+      border-radius: 7px;
+
+      .title {
+        margin: 5px 0;
+
+        font-size: rem(16);
+        line-height: rem(18);
+        text-align: right;
+      }
+
+      >div {
+        margin-left: auto;
+      }
+
+      >img {
+        @include size(30px)
+      }
+    }
+  }
+
+  .break, .day-off {
+    .info {
+      >img {
+        margin-left: auto;
+        margin-right: auto;
+        @include size(60px)
+      }
+    }
+  }
+
+  .day-off {
+    // height: ? - in JS;
+    
+    .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    text-align: center;
+    font-size: rem(30);
+    line-height: rem(32);
+    
+    >img {
+      @include size(150px)
+    }}
+  }
+}
+
+.card.over {
+  border: 2px solid $borderColorOver;
+}
+.card.under {
+  border: 2px solid $borderColorUnder;
+}
