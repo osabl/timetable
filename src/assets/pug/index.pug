@@ -6,19 +6,12 @@ block variables
   //- schedule the start and end lessons
   - 
     var timeRanges = [
-    { start: 0, end: 539 },
-    { start: 540, end: 619 },
-    { start: 620, end: 629 },
-    { start: 630, end: 709 },
-    { start: 710, end: 739 },
-    { start: 740, end: 819 },
-    { start: 820, end: 829 },
-    { start: 830, end: 909 },
-    { start: 910, end: 919 },
-    { start: 920, end: 999 },
-    { start: 1000, end: 1009 },
-    { start: 1010, end: 1089 },
-    { start: 1090, end: 1439 }
+    { start: '9:00', end: '10:20' },
+    { start: '10:30', end: '11:50' },
+    { start: '12:20', end: '13:40' },
+    { start: '13:50', end: '15:10' },
+    { start: '15:20', end: '16:40' },
+    { start: '16:50', end: '18:10' },
     ]
 
   //- Paths to lesson type images
@@ -31,7 +24,7 @@ block variables
   //- Shedule
   - 
     var mondayOver = [{
-      title: 'Перерыв', 
+      title: '', 
       teacher: '', 
       classroom: '', 
       type: 'перерыв', 
@@ -64,7 +57,7 @@ block variables
 
   - 
     var tuesdayOver = [{
-      title: 'Перерыв', 
+      title: '', 
       teacher: '', 
       classroom: '', 
       type: 'перерыв', 
@@ -81,12 +74,6 @@ block variables
       classroom: '505 ГК', 
       type: 'лекция', 
       pathImageByType: pathForLecture
-    }, {
-      title: 'Перерыв', 
-      teacher: '', 
-      classroom: '', 
-      type: 'перерыв', 
-      pathImageByType: pathForBreak
     }]
 
   - 
@@ -108,12 +95,6 @@ block variables
       classroom: '505 ГК', 
       type: 'лекция', 
       pathImageByType: pathForLecture
-    }, {
-      title: 'Перерыв', 
-      teacher: '', 
-      classroom: '', 
-      type: 'перерыв', 
-      pathImageByType: pathForBreak
     }]
   - var thursdayOver = []
   - var fridayOver = []
@@ -124,30 +105,30 @@ block variables
       teacher: 'Войтасик А.Н.', 
       classroom: '309 НК', 
       type: 'лекция', 
-      pathImageByType: './assets/img/lecture'
+      pathImageByType: pathForLecture
     }, {
       title: 'Основови автомат. проектування', 
       teacher: 'Волянська Я.Б.', 
       classroom: '134 НК', 
       type: 'лекция', 
-      pathImageByType: './assets/img/lecture'
+      pathImageByType: pathForLecture
     }, {
       title: 'Дисципліна спец. підготовки', 
       teacher: 'Овсянников В.М.', 
       classroom: '306 НК', 
       type: 'лекция', 
-      pathImageByType: './assets/img/lecture'
+      pathImageByType: pathForLecture
     }, {
       title: 'Дисципліна спец. підготовки', 
       teacher: 'Бабкін Г.В.', 
       classroom: '309Б НК', 
-      type: 'лаборатория', 
-      pathImageByType: './assets/img/laboratory'
+      type: 'практическая', 
+      pathImageByType: pathForPractice
     }] 
 
   - 
     var tuesdayUnder = [{
-      title: 'Перерыв', 
+      title: '', 
       teacher: '', 
       classroom: '', 
       type: 'перерыв', 
@@ -164,12 +145,6 @@ block variables
       classroom: '505 ГК', 
       type: 'лекция', 
       pathImageByType: pathForLecture
-    }, {
-      title: 'Перерыв', 
-      teacher: '', 
-      classroom: '', 
-      type: 'перерыв', 
-      pathImageByType: pathForBreak
     }]
 
   - 
@@ -183,22 +158,33 @@ block variables
       title: 'Основи наук. досліджень', 
       teacher: 'Волянська Я.Б.', 
       classroom: '321 НК', 
-      type: 'лекция', 
-      pathImageByType: pathForLecture
+      type: 'практическая', 
+      pathImageByType: pathForPractice
     }]
   - var thursdayUnder = []
   - var fridayUnder = []
 
 block content
-  .week.over
-    +day('Понедельник', mondayOver, timeRanges)
-    +day('Вторник', tuesdayOver, timeRanges)
-    +day('Среда', wednesdayOver, timeRanges)
-    +dayOff('Четверг')
-    +dayOff('Пятница')
-  .week.under
-    +day('Понедельник', mondayUnder, timeRanges)
-    +day('Вторник', tuesdayUnder, timeRanges)
-    +day('Среда', wednesdayUnder, timeRanges)
-    +dayOff('Четверг')
-    +dayOff('Пятница')
+  .swiper
+    .swiper-pagination
+    .week.swiper-wrapper
+      .wrapper.swiper-slide
+        .day
+          +card('Понедельник', mondayOver, timeRanges, 'over')
+          +card('Понедельник', mondayUnder, timeRanges, 'under')
+      .wrapper.swiper-slide
+        .day
+          +card('Вторник', tuesdayOver, timeRanges, 'over')
+          +card('Вторник', tuesdayUnder, timeRanges, 'under')
+      .wrapper.swiper-slide
+        .day
+          +card('Среда', wednesdayOver, timeRanges, 'over')
+          +card('Среда', wednesdayUnder, timeRanges, 'under')
+      .wrapper.swiper-slide
+        .day
+          +cardOff('Четверг', 'over')
+          +cardOff('Четверг', 'under')
+      .wrapper.swiper-slide
+        .day
+          +cardOff('Пятница', 'over')
+          +cardOff('Пятница', 'under')
