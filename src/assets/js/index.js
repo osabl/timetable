@@ -148,8 +148,9 @@ function getCustomDay (TimeCapture, lessonsToday, phases = defaultPhases) {
 // }
 
 function timeConvert (min) {
-  const hours = Math.floor(min / 60)
-  const minutes = Math.round(min % 60)
+  const h = Math.floor(min / 60)
+  const m = Math.round(min % 60)
+  const minutes = m < 10 ? `0${m}` : `${m}`
 
-  return `${hours}:${minutes}`
+  return `${h}:${minutes}`
 }
