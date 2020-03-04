@@ -21,12 +21,11 @@ const defaultBreakPhases = [
   { from: 1001, to: 1010 }
 ]
 
-const timecap = new TimeCapture()
+const timecap = new TimeCapture('2020-03-05 20:00')
 
 window.onload = function () {
   const dateInfo = document.querySelector('#date')
   const weekInfo = document.querySelector('#week')
-
   const toggleBtn = document.querySelector('.toggle > img')
   const toggle = document.querySelector('.toggle')
   const header = document.querySelector('.header')
@@ -54,24 +53,29 @@ window.onload = function () {
   sizer()
 
   try {
-    const phase = timecap.getPhase(defaultPhases)
-    console.log(phase)
+    let duration = 80 // in minutes
+    let phase = timecap.getPhase(defaultPhases)
 
     const currentDay = days[timecap.getDay() - 1]
-    console.log(currentDay)
 
     const lessons = currentDay.querySelectorAll('.card')[(timecap.getWeekNumber() - 1) % 2].querySelectorAll('.lesson')
-    console.log(lessons)
+    // console.log(lessons)
+    if (lessons.length === 1 && lessons[0].getAttribute('class').includes('day-off')) {
+      phase = timecap.getPhase([
+        { from: 0, to: 0 },
+        { from: 0, to: 1439 }
+      ])
+      duration = 1439
+    }
 
-    // get number of lessons
+
     lessonsToday = lessons.length
-    console.log('lessons: ' + lessonsToday)
+
     if (phase === undefined && timecap.getPhase(defaultBreakPhases) !== undefined) {
       throw new Error('BREAK')
     }
 
     const currentLesson = lessons[Math.floor(phase) - 1]
-    console.log(currentLesson)
 
     const lessonAttr = currentLesson.getAttribute('class') + ' active'
     currentLesson.setAttribute('class', lessonAttr)
@@ -79,13 +83,10 @@ window.onload = function () {
     // TIME PROGRESS
     const timeProgress = currentLesson.querySelector('.time .progress-over')
     timeProgress.style.height = `${(phase - Math.floor(phase)) * 100}%`
-    console.log(timeProgress)
-    console.log((phase - Math.floor(phase)) * 100)
 
     const timeEnd = currentLesson.querySelector('.time > :last-child')
-    timeEnd.textContent = timeConvert(80 * (1 - (phase - Math.floor(phase))))
+    timeEnd.textContent = timeConvert(duration * (1 - (phase - Math.floor(phase))))
     timeEnd.classList.toggle('countdown')
-    console.log('time: ' + timeConvert(80 * (1 - (phase - Math.floor(phase)))))
   } catch (err) {
     console.log(err)
     console.log('Maybe today is a day off or there are no more lessons)')
