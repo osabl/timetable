@@ -59,7 +59,6 @@ window.onload = function () {
     const currentDay = days[timecap.getDay() - 1]
 
     const lessons = currentDay.querySelectorAll('.card')[(timecap.getWeekNumber() - 1) % 2].querySelectorAll('.lesson')
-    // console.log(lessons)
     if (lessons.length === 1 && lessons[0].getAttribute('class').includes('day-off')) {
       phase = timecap.getPhase([
         { from: 0, to: 0 },
@@ -67,7 +66,6 @@ window.onload = function () {
       ])
       duration = 1439
     }
-
 
     lessonsToday = lessons.length
 

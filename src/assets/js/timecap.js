@@ -22,11 +22,8 @@ export class TimeCapture extends Date {
 
   getPhase (phases) {
     const today = this.getMinutesToday()
-    console.log(today)
 
     for (let i = 0; i < phases.length; i++) {
-      console.log(i, phases[i].from, phases[i].to)
-
       if (phases[i].from <= today && today < phases[i].to) {
         return i + getFraction(today, phases[i].from, phases[i].to)
       }
