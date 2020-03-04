@@ -21,7 +21,7 @@ const defaultBreakPhases = [
   { from: 1001, to: 1010 }
 ]
 
-const timecap = new TimeCapture('2020-03-05 20:00')
+const timecap = new TimeCapture()
 
 window.onload = function () {
   const dateInfo = document.querySelector('#date')
