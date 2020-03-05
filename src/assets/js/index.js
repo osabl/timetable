@@ -119,8 +119,11 @@ window.onload = function () {
 
   const preloader = document.querySelector('#preloader')
   const preloaderStyle = document.querySelector('#preloader-style')
-  preloader.remove()
-  preloaderStyle.remove()
+  preloader.style.opacity = '0'
+  setTimeout(() => {
+    preloader.remove()
+    preloaderStyle.remove()
+  }, 1000)
 }
 
 function getCustomDay (TimeCapture, lessonsToday, phases = defaultPhases) {
