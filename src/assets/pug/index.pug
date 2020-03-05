@@ -158,6 +158,45 @@ block variables
   - var thursdayUnder = []
   - var fridayUnder = []
 
+block preloader
+  .preloader#preloader
+    .loader
+  style#preloader-style(type="text/css").
+    .preloader {
+      position: fixed;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      background-color: #ffffff;
+    }
+    .loader {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+    }
+    .loader:after {
+      content: " ";
+      display: block;
+      width: 64px;
+      height: 64px;
+      margin: 8px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      border-color: #157FC4 transparent #7928B0 transparent;
+      animation: loader 1.2s linear infinite;
+    }
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
 block content
   .swiper
     .swiper-pagination

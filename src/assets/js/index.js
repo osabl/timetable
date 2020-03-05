@@ -116,6 +116,11 @@ window.onload = function () {
       }
     }
   })
+
+  const preloader = document.querySelector('#preloader')
+  const preloaderStyle = document.querySelector('#preloader-style')
+  preloader.remove()
+  preloaderStyle.remove()
 }
 
 function getCustomDay (TimeCapture, lessonsToday, phases = defaultPhases) {
