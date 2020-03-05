@@ -32,6 +32,7 @@ window.onload = function () {
   const pagination = document.querySelector('.swiper-pagination')
   const days = document.querySelectorAll('.day')
   const flipElements = [toggle, header, pagination, ...days]
+  const nextFlipElements = [toggle, pagination, ...days]
 
   toggleBtn.addEventListener('click', () => {
     for (const elem of days) {
@@ -94,7 +95,7 @@ window.onload = function () {
   weekInfo.textContent = timecap.week
 
   const swiper = new Swiper('.swiper', {
-    initialSlide: getCustomDay(timecap, lessonsToday),
+    initialSlide: getCustomDay(timecap, lessonsToday, defaultPhases, nextFlipElements),
     speed: 500,
     pagination: {
       el: '.swiper-pagination',
@@ -126,7 +127,7 @@ window.onload = function () {
   }, 1000)
 }
 
-function getCustomDay (TimeCapture, lessonsToday, phases = defaultPhases) {
+function getCustomDay (TimeCapture, lessonsToday, phases = defaultPhases, flipElements) {
   let day = 0
 
   if (TimeCapture.getDay() > 0 && TimeCapture.getDay() < 6) {
@@ -134,7 +135,15 @@ function getCustomDay (TimeCapture, lessonsToday, phases = defaultPhases) {
   }
 
   if (Math.floor(TimeCapture.getPhase(phases)) > lessonsToday || Math.floor(timecap.getPhase(defaultBreakPhases)) >= lessonsToday - 1) {
-    return day === 5 ? day : day + 1
+    if (TimeCapture.getDay() > 4 || TimeCapture.getDay() === 0) {
+      for (const elem of flipElements) {
+        elem.classList.toggle('flip')
+      }
+
+      return 0
+    }
+
+    return day + 1
   }
 
   return day
