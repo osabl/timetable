@@ -28,4 +28,14 @@
     width: 33.333%;
     text-align: right;
   }
+
+  .install {
+    display: flex;
+    width: 35px;
+    margin-left: 10px;
+
+    > img {
+      cursor: pointer;
+    }
+  }
 }

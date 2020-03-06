@@ -34,6 +34,37 @@ window.onload = function () {
   const flipElements = [toggle, header, pagination, ...days]
   const nextFlipElements = [toggle, pagination, ...days]
 
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault()
+    const deferredPrompt = e
+
+    const install = document.createElement('div')
+    install.className = 'install'
+
+    const installBtn = document.createElement('img')
+    installBtn.src = '/assets/img/download.png'
+    installBtn.alt = 'скачать'
+
+    install.append(installBtn)
+    header.append(install)
+
+    install.addEventListener('click', (e) => {
+      deferredPrompt.prompt()
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt')
+        } else {
+          console.log('User dismissed the install prompt')
+          install.remove()
+        }
+      })
+    })
+  })
+
+  window.addEventListener('appinstalled', (evt) => {
+    document.querySelector('.install').remove()
+  })
+
   toggleBtn.addEventListener('click', () => {
     for (const elem of days) {
       elem.classList.toggle('flip')
