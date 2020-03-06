@@ -2,7 +2,7 @@
 
 This is the website and web application of the lesson schedule for my university. The project is updated as I learn to program.
 
-The project is focused on mobile devices.
+**The project is focused on mobile devices.**
 
 *The main goal of the project development is programming training.
 This project may contain errors and use unnecessary or incorrect concepts, patterns, technologies, libraries and etc.*
@@ -18,7 +18,7 @@ This project may contain errors and use unnecessary or incorrect concepts, patte
 * Progressive Web Application
 * Button to install the PWA
 
-## The following technologies and libraries are used in development:
+## Technologies and libraries used in development:
 
 * [Webpack](https://github.com/webpack/webpack)
 * [Pug](https://github.com/pugjs/pug)
