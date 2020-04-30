@@ -1,13 +1,16 @@
-# Time Table
-
-This is the website and web application of the lesson schedule for my university. The project is updated as I learn to program.
+<div align="center">
+  <h1>Time Table</h1>
+  <img width="400" src="./preview.png" alt="preview">
+  <p>
+    The Progressive Web Applications of the lesson schedule for my university.
+  </p>
+  <h3><a href="https://5362m.ml/">Demo</a></h3>
+</div>
 
 **The project is focused on mobile devices.**
 
-*The main goal of the project development is programming training.
-This project may contain errors and use unnecessary or incorrect concepts, patterns, technologies, libraries and etc.*
-
-## [Demo](https://5362m.ml/)
+*The main goal of the project development is programming training. This project may contain errors and use unnecessary or incorrect concepts, patterns, technologies, libraries and etc.*
+*The project is updated as I learn to program.*
 
 ## What this application can do:
 
