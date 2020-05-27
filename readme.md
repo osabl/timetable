@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Time Table</h1>
-  <img width="400" src="./preview.png" alt="preview">
+  <img width="400" src="./timetable.png" alt="timetable">
   <p>
     The Progressive Web Applications of the lesson schedule for my university.
   </p>
